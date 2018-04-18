@@ -1,20 +1,17 @@
 # coding=utf-8
-from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
-app = Flask(__name__)
 
-class Config(object):
-    DEBUG = True
-    SQLALCHEMY_DATABASE_URI = 'mysql://root:mysql@127.0.0.1:3306/ih_test'
-    SQLALCHEMY_TRACK_MODIFICATIONS = False
+# from flask_script import Manager
+from flask_migrate import Manager,Migrate,MigrateCommand
+from iHome import create_app,db
+from iHome import models
 
+app = create_app('development')
 
-app.config.from_object(Config)
-db = SQLAlchemy(app)
+manage = Manager(app)
+Migrate(app,db)
+manage.add_command('db',MigrateCommand)
 
-@app.route('/')
-def index():
-    return 'index'
 
 if __name__ == '__main__':
-    app.run()
+    # app.run()
+    manage.run()
