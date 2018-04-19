@@ -1,5 +1,6 @@
 # coding=utf-8
 import redis
+import logging
 
 class Config(object):
     DEBUG = True
@@ -20,6 +21,7 @@ class Config(object):
 
 class DevelopmentConfig(Config):
     DEBUG = True
+    LOG_LEVEL = logging.DEBUG
 
 class ProductionConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'mysql://root:mysql@127.0.0.1:3306/ih_test'

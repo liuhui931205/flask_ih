@@ -42,6 +42,48 @@ function sendSMSCode() {
     }
 
     // TODO: 通过ajax方式向后端接口发送请求，让后端发送短信验证码
+    var params = {
+        'mobile':mobile,
+        'image_code':imageCode,
+        'image_code_id':imageCodeId
+    }
+    $.ajax({
+        'url':'/api/v1.0/sms_code',
+        'type':'post',
+        'data':JSON.stringify(params),
+        'headers':{
+            'X-CSRFToken':getCookie('csrf_token')
+        },
+        'contentType':'application/json',
+        'success':function (res) {
+           if (res.errno == '0'){
+               var num = 60
+               var tid = setInterval(function () {
+                   if (num<=0){
+                       clearInterval(tid)
+                       $('.phonecode-a').text('获取验证码');
+                        // 重新添加点击事件
+                       $(".phonecode-a").attr("onclick", "sendSMSCode();");
+                   }
+                   else {
+                       $('.phonecode-a').text(num+'秒');
+                   }
+                   num -= 1
+
+               },1000)
+
+           }
+           else {
+               $('#phone-code-err span').text(res.errmsg)
+               $('#phone-code-err').show
+               $(".phonecode-a").attr("onclick", "sendSMSCode();");
+
+
+           }
+
+        }
+
+    })
 }
 
 $(document).ready(function() {
@@ -64,4 +106,59 @@ $(document).ready(function() {
     });
 
     // TODO: 注册的提交(判断参数是否为空)
+    $('.form-register').submit(function (e) {
+        e.preventDefault()
+        var mobile = $("#mobile").val();
+        var phoneCode = $("#phonecode").val();
+        var password = $("#password").val();
+        var password2 = $("#password2").val();
+        if (!mobile) {
+            $("#mobile-err span").html("请填写正确的手机号！");
+            $("#mobile-err").show();
+            return;
+        }
+        if (!phoneCode) {
+            $("#phone-code-err span").html("请填写短信验证码！");
+            $("#phone-code-err").show();
+            return;
+        }
+        if (!password) {
+            $("#password-err span").html("请填写密码!");
+            $("#password-err").show();
+            return;
+        }
+        if (password != password2) {
+            $("#password2-err span").html("两次密码不一致!");
+            $("#password2-err").show();
+            return;
+        }
+        var params = {
+            'mobile':mobile,
+            'phonecode':phoneCode,
+            'password':password
+        };
+        $.ajax({
+            'url':'/api/v1.0/users',
+            'type':'post',
+            'data':JSON.stringify(params),
+            'headers':{
+            'X-CSRFToken':getCookie('csrf_token')
+            },
+            'contentType':'application/json',
+            'success':function (req) {
+                if (req.errno == '0') {
+                    // 注册成功，跳转的首页
+                    location.href = 'index.html'
+                }
+                else {
+                    // 注册失败
+                    alert(resp.errmsg);
+                }
+
+            }
+        })
+
+
+
+    })
 })
