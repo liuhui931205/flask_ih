@@ -43,9 +43,9 @@ def get_sms_code():
         current_app.logger.error(e)
         return jsonify(errno=RET.DBERR, errmsg='保存验证码失败')
 
-    res = CCP().sendtemplatesms(mobile, [code,  constants.SMS_CODE_REDIS_EXPIRES/60], 1)
-    if res != 1:
-        return jsonify(errno=RET.THIRDERR, errmsg='发送短信失败')
+    # res = CCP().sendtemplatesms(mobile, [code,  constants.SMS_CODE_REDIS_EXPIRES/60], 1)
+    # if res != 1:
+    #     return jsonify(errno=RET.THIRDERR, errmsg='发送短信失败')
     return jsonify(errno=RET.OK, errmsg='发送成功')
 
 

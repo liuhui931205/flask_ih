@@ -25,5 +25,28 @@ $(document).ready(function() {
             $("#password-err").show();
             return;
         }
+        var params = {
+            'mobile':mobile,
+            'password':passwd
+        }
+        $.ajax({
+            'url':'/api/v1.0/session',
+            'type':'post',
+            'data':JSON.stringify(params),
+            'contentType':'application/json',
+            'headers':{
+                'X-CSRFToken':getCookie('csrf_token')
+
+            },
+            'success':function (resp) {
+                if (resp.errno == '0'){
+                    location.href = '/'
+                }
+                else {
+                    $("#password-err span").html(resp.errmsg);
+                    $("#password-err").show();
+                }
+            }
+        })
     });
 })
