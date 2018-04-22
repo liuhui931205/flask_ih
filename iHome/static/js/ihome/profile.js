@@ -18,6 +18,10 @@ $(document).ready(function () {
             $('#user-avatar').attr('src',resp.data.avatar_url)
             $('#user-name').val(resp.data.username)
         }
+        else if (resp.errno == "4101") {
+            // 用户未登录，跳转到登录页
+            location.href = "login.html";
+        }
         else {
             alert(resp.errmsg);
         }
@@ -37,6 +41,10 @@ $(document).ready(function () {
                 if (resp.errno == '0'){
                     $('#user-avatar').attr('src',resp.data.avatar_url)
                 }
+                else if (resp.errno == "4101") {
+            // 用户未登录，跳转到登录页
+            location.href = "login.html";
+        }
                 else {
                     alert(resp.errmsg)
                 }
@@ -70,6 +78,14 @@ $(document).ready(function () {
                 if (resp.errno == '0'){
                     showSuccessMsg()
 
+                }
+                else if (resp.errno == "4101") {
+            // 用户未登录，跳转到登录页
+                    location.href = "login.html";
+                }
+                else if (resp.errno == "4003") {
+                            // 用户名重复
+                    $(".error-msg").show();
                 }
                 else {
                     alert(resp.errmsg);

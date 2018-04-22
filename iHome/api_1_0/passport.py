@@ -6,6 +6,12 @@ from iHome import redis_store,db
 from iHome.models import User
 import re
 
+@api.route('/session')
+def check_user_login():
+    user_id = session.get('user_id')
+    username = session.get('username')
+    return jsonify(errno=RET.OK, errmsg='ok',data={'user_id':user_id,'username':username})
+
 @api.route('/session',methods=['DELETE'])
 def logout():
     session.clear()

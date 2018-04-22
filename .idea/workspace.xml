@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9f0d9919-89ab-4d37-857a-8301c11e99a1" name="Default" comment="短信验证码，注册实现">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHome/api_1_0/profile.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHome/utils/image_stroage.py" />
+    <list default="true" id="9f0d9919-89ab-4d37-857a-8301c11e99a1" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iHome/api_1_0/house.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iHome/api_1_0/__init__.py" afterPath="$PROJECT_DIR$/iHome/api_1_0/__init__.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iHome/api_1_0/passport.py" afterPath="$PROJECT_DIR$/iHome/api_1_0/passport.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iHome/api_1_0/verify.py" afterPath="$PROJECT_DIR$/iHome/api_1_0/verify.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iHome/api_1_0/profile.py" afterPath="$PROJECT_DIR$/iHome/api_1_0/profile.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iHome/models.py" afterPath="$PROJECT_DIR$/iHome/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iHome/static/html/detail.html" afterPath="$PROJECT_DIR$/iHome/static/html/detail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iHome/static/html/newhouse.html" afterPath="$PROJECT_DIR$/iHome/static/html/newhouse.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iHome/static/js/ihome/auth.js" afterPath="$PROJECT_DIR$/iHome/static/js/ihome/auth.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iHome/static/js/ihome/login.js" afterPath="$PROJECT_DIR$/iHome/static/js/ihome/login.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iHome/static/js/ihome/my.js" afterPath="$PROJECT_DIR$/iHome/static/js/ihome/my.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iHome/static/js/ihome/detail.js" afterPath="$PROJECT_DIR$/iHome/static/js/ihome/detail.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iHome/static/js/ihome/index.js" afterPath="$PROJECT_DIR$/iHome/static/js/ihome/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iHome/static/js/ihome/newhouse.js" afterPath="$PROJECT_DIR$/iHome/static/js/ihome/newhouse.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iHome/static/js/ihome/profile.js" afterPath="$PROJECT_DIR$/iHome/static/js/ihome/profile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iHome/utils/commons.py" afterPath="$PROJECT_DIR$/iHome/utils/commons.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,7 +25,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/ihome_flask$sms.coverage" NAME="sms Coverage Results" MODIFIED="1524104188600" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/iHome/utils" />
-    <SUITE FILE_PATH="coverage/ihome_flask$manage.coverage" NAME="manage Coverage Results" MODIFIED="1524294043073" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ihome_flask$manage.coverage" NAME="manage Coverage Results" MODIFIED="1524367662412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -32,11 +33,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="profile.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/iHome/api_1_0/profile.py">
+      <file leaf-file-name="passport.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/iHome/api_1_0/passport.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="37" column="49" lean-forward="false" selection-start-line="37" selection-start-column="49" selection-end-line="37" selection-end-column="49" />
+            <state relative-caret-position="384">
+              <caret line="16" column="19" lean-forward="true" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
               <folding>
                 <element signature="e#15#32#0" expanded="true" />
               </folding>
@@ -44,22 +45,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="auth.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/iHome/static/html/auth.html">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/iHome/static/html/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="32" column="93" lean-forward="true" selection-start-line="32" selection-start-column="93" selection-end-line="32" selection-end-column="102" />
+            <state relative-caret-position="240">
+              <caret line="54" column="40" lean-forward="false" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="auth.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/iHome/static/js/ihome/auth.js">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/iHome/static/js/ihome/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="46" column="16" lean-forward="false" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
+            <state relative-caret-position="-65">
+              <caret line="106" column="9" lean-forward="true" selection-start-line="106" selection-start-column="9" selection-end-line="106" selection-end-column="9" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="house.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/iHome/api_1_0/house.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="103">
+              <caret line="152" column="29" lean-forward="false" selection-start-line="152" selection-start-column="29" selection-end-line="152" selection-end-column="29" />
+              <folding>
+                <element signature="e#15#32#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -91,15 +104,21 @@
         <option value="$PROJECT_DIR$/iHome/api_1_0/verify.py" />
         <option value="$PROJECT_DIR$/iHome/static/js/ihome/login.js" />
         <option value="$PROJECT_DIR$/iHome/web_html.py" />
-        <option value="$PROJECT_DIR$/iHome/api_1_0/__init__.py" />
         <option value="$PROJECT_DIR$/iHome/utils/image_stroage.py" />
-        <option value="$PROJECT_DIR$/iHome/static/js/ihome/profile.js" />
-        <option value="$PROJECT_DIR$/iHome/models.py" />
-        <option value="$PROJECT_DIR$/iHome/api_1_0/passport.py" />
         <option value="$PROJECT_DIR$/iHome/static/js/ihome/my.js" />
         <option value="$PROJECT_DIR$/iHome/utils/commons.py" />
         <option value="$PROJECT_DIR$/iHome/api_1_0/profile.py" />
+        <option value="$PROJECT_DIR$/iHome/models.py" />
         <option value="$PROJECT_DIR$/iHome/static/js/ihome/auth.js" />
+        <option value="$PROJECT_DIR$/iHome/static/js/ihome/profile.js" />
+        <option value="$PROJECT_DIR$/iHome/api_1_0/__init__.py" />
+        <option value="$PROJECT_DIR$/iHome/static/html/newhouse.html" />
+        <option value="$PROJECT_DIR$/iHome/static/js/ihome/newhouse.js" />
+        <option value="$PROJECT_DIR$/iHome/static/html/detail.html" />
+        <option value="$PROJECT_DIR$/iHome/static/js/ihome/detail.js" />
+        <option value="$PROJECT_DIR$/iHome/api_1_0/passport.py" />
+        <option value="$PROJECT_DIR$/iHome/static/js/ihome/index.js" />
+        <option value="$PROJECT_DIR$/iHome/api_1_0/house.py" />
       </list>
     </option>
   </component>
@@ -133,6 +152,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -252,7 +272,6 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -260,7 +279,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="SearchEverywhereHistoryKey" value="aut&#9;FILE&#9;file:///home/python/Desktop/ihome_flask/iHome/static/js/ihome/auth.js&#10;my&#9;FILE&#9;file:///home/python/Desktop/ihome_flask/iHome/static/js/ihome/my.js&#10;pro&#9;FILE&#9;file:///home/python/Desktop/ihome_flask/iHome/static/js/ihome/profile.js&#10;log&#9;FILE&#9;file:///home/python/Desktop/ihome_flask/iHome/static/js/ihome/login.js" />
+    <property name="SearchEverywhereHistoryKey" value="index&#9;FILE&#9;file:///home/python/Desktop/ihome_flask/iHome/static/js/ihome/index.js&#10;de&#9;FILE&#9;file:///home/python/Desktop/ihome_flask/iHome/static/html/detail.html&#10;new&#9;FILE&#9;file:///home/python/Desktop/ihome_flask/iHome/static/html/newhouse.html&#10;newhou&#9;FILE&#9;file:///home/python/Desktop/ihome_flask/iHome/static/js/ihome/newhouse.js&#10;pro&#9;FILE&#9;file:///home/python/Desktop/ihome_flask/iHome/static/js/ihome/profile.js&#10;my&#9;FILE&#9;file:///home/python/Desktop/ihome_flask/iHome/static/js/ihome/my.js&#10;aut&#9;FILE&#9;file:///home/python/Desktop/ihome_flask/iHome/static/js/ihome/auth.js&#10;log&#9;FILE&#9;file:///home/python/Desktop/ihome_flask/iHome/static/js/ihome/login.js" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -576,14 +595,21 @@
       <option name="project" value="LOCAL" />
       <updated>1524108616704</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="登录，头像，退出，个人信息">
+      <created>1524294640908</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1524294640908</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1851" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17867114" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1630374" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -613,7 +639,8 @@
     <MESSAGE value="搭建框架" />
     <MESSAGE value="图片验证吗" />
     <MESSAGE value="短信验证码，注册实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="短信验证码，注册实现" />
+    <MESSAGE value="登录，头像，退出，个人信息" />
+    <option name="LAST_COMMIT_MESSAGE" value="登录，头像，退出，个人信息" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -622,6 +649,32 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/iHome/api_1_0/profile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="888">
+          <caret line="37" column="49" lean-forward="false" selection-start-line="37" selection-start-column="49" selection-end-line="37" selection-end-column="49" />
+          <folding>
+            <element signature="e#15#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iHome/static/html/auth.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="768">
+          <caret line="32" column="93" lean-forward="true" selection-start-line="32" selection-start-column="93" selection-end-line="32" selection-end-column="102" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iHome/static/js/ihome/auth.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/iHome/api_1_0/passport.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -636,9 +689,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="8" column="32" lean-forward="false" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-          <folding>
-            <element signature="e#15#68#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -646,7 +696,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
           <caret line="16" column="34" lean-forward="false" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -672,9 +721,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="8" column="32" lean-forward="false" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-          <folding>
-            <element signature="e#15#68#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -682,7 +728,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
           <caret line="16" column="34" lean-forward="false" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -706,7 +751,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
           <caret line="16" column="34" lean-forward="false" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -714,7 +758,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -722,9 +765,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
           <caret line="45" column="60" lean-forward="false" selection-start-line="45" selection-start-column="60" selection-end-line="47" selection-end-column="61" />
-          <folding>
-            <element signature="e#15#32#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -740,7 +780,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-459">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -748,17 +787,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
           <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="e#15#68#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/iHome/api_1_0/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="32" lean-forward="false" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -766,25 +794,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/iHome/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="47" column="33" lean-forward="false" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/iHome/api_1_0/passport.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" column="12" lean-forward="true" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
-          <folding>
-            <element signature="e#15#32#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -792,23 +801,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="379">
           <caret line="22" column="8" lean-forward="false" selection-start-line="45" selection-start-column="63" selection-end-line="45" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/iHome/static/js/ihome/profile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="991">
-          <caret line="74" column="39" lean-forward="true" selection-start-line="74" selection-start-column="39" selection-end-line="74" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/iHome/static/js/ihome/my.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -830,29 +822,129 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/iHome/api_1_0/profile.py">
+    <entry file="file://$PROJECT_DIR$/iHome/static/js/ihome/profile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="37" column="49" lean-forward="false" selection-start-line="37" selection-start-column="49" selection-end-line="37" selection-end-column="49" />
-          <folding>
-            <element signature="e#15#32#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="369">
+          <caret line="88" column="17" lean-forward="true" selection-start-line="88" selection-start-column="17" selection-end-line="88" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/iHome/static/html/auth.html">
+    <entry file="file://$PROJECT_DIR$/iHome/static/js/ihome/my.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="32" column="93" lean-forward="true" selection-start-line="32" selection-start-column="93" selection-end-line="32" selection-end-column="102" />
+        <state relative-caret-position="441">
+          <caret line="22" column="4" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/iHome/static/js/ihome/auth.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="46" column="16" lean-forward="false" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
+        <state relative-caret-position="336">
+          <caret line="26" column="8" lean-forward="false" selection-start-line="26" selection-start-column="8" selection-end-line="29" selection-end-column="9" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iHome/static/html/auth.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="837">
+          <caret line="36" column="98" lean-forward="true" selection-start-line="36" selection-start-column="91" selection-end-line="36" selection-end-column="98" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iHome/api_1_0/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="49" lean-forward="false" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iHome/static/js/ihome/newhouse.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2160">
+          <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iHome/static/html/newhouse.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="276" column="39" lean-forward="true" selection-start-line="276" selection-start-column="39" selection-end-line="276" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iHome/static/html/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="124" column="22" lean-forward="false" selection-start-line="124" selection-start-column="22" selection-end-line="124" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iHome/static/js/ihome/detail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="487">
+          <caret line="43" column="8" lean-forward="true" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iHome/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-953">
+          <caret line="54" column="30" lean-forward="false" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iHome/api_1_0/profile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="20" column="69" lean-forward="false" selection-start-line="20" selection-start-column="69" selection-end-line="20" selection-end-column="69" />
+          <folding>
+            <element signature="e#15#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iHome/api_1_0/passport.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="16" column="19" lean-forward="true" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+          <folding>
+            <element signature="e#15#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iHome/static/html/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="54" column="40" lean-forward="false" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iHome/static/js/ihome/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-65">
+          <caret line="106" column="9" lean-forward="true" selection-start-line="106" selection-start-column="9" selection-end-line="106" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iHome/api_1_0/house.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="152" column="29" lean-forward="false" selection-start-line="152" selection-start-column="29" selection-end-line="152" selection-end-column="29" />
+          <folding>
+            <element signature="e#15#32#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

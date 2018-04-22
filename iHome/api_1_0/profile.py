@@ -7,6 +7,20 @@ from iHome import constants,db
 from iHome.utils.image_stroage import image_storage
 from iHome.utils.commons import login_required
 
+@api.route('/user/auth')
+@login_required
+def get_user_auth():
+    user_id = g.user_id
+    try:
+        user = User.query.get(user_id)
+    except Exception as e:
+        current_app.logger.error(e)
+        return jsonify(errno=RET.DBERR, errmsg='查询用户失败')
+    if not user:
+        return jsonify(errno=RET.USERERR, errmsg='用户不存在')
+    return jsonify(errno=RET.OK, errmsg='ok',data=user.auth_to_dict())
+
+
 @api.route('/user/auth',methods=['POST'])
 @login_required
 def set_user_auth():
